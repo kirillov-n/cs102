@@ -8,18 +8,18 @@ def encrypt_vigenere(plaintext, keyword):
     'LXFOPVEFRNHR'
     """
     ciphertext = ''
-    for index, abcd in enumerate(plaintext):
-        if 'a' <= abcd and abcd <= 'z' or 'A' <= abcd and abcd <= 'Z':
+    for index, alph in enumerate(plaintext):
+        if 'a' <= alph and alph <= 'z' or 'A' <= alph and alph <= 'Z':
             shift = ord(keyword[index % len(keyword)])
-            shift -= ord('a') if 'a' <= abcd <= 'z' else ord('A')
-            code = ord(abcd) + shift
-            if 'a' <= abcd and abcd <= 'z' and code > ord('z'):
+            shift -= ord('a') if 'a' <= alph <= 'z' else ord('A')
+            code = ord(alph) + shift
+            if 'a' <= alph and alph <= 'z' and code > ord('z'):
                 code -= 26
-            elif 'A' <= abcd and abcd <= 'Z' and code > ord('Z'):
+            elif 'A' <= alph and alph <= 'Z' and code > ord('Z'):
                 code -= 26
             ciphertext += chr(code)
         else:
-            chiphertext += abcd
+            chiphertext += alph
     return ciphertext
     
 
@@ -34,16 +34,16 @@ def decrypt_vigenere(ciphertext, keyword):
     'ATTACKATDAWN'
     """
     plaintext = ''
-    for index, abcd in enumerate(ciphertext):
-        if 'a' <= abcd and abcd <= 'z' or 'A' <= abcd and abcd <= 'Z':
+    for index, alph in enumerate(ciphertext):
+        if 'a' <= alph and alph <= 'z' or 'A' <= alph and alph <= 'Z':
             shift = ord(keyword[index % len(keyword)])
-            shift -= ord('a') if 'a' <= abcd <= 'z' else ord('A')
-            code = ord(abcd) - shift
-            if 'a' <= abcd and abcd <= 'z' and code < ord('a'):
+            shift -= ord('a') if 'a' <= alph <= 'z' else ord('A')
+            code = ord(alph) - shift
+            if 'a' <= alph and alph <= 'z' and code < ord('a'):
                 code += 26
-            elif 'A' <= abcd and abcd <= 'Z' and code < ord('A'):
+            elif 'A' <= alph and alph <= 'Z' and code < ord('A'):
                 code += 26
             plaintext += chr(code)
         else:
-            plaintext += abcd
+            plaintext += alph
     return plaintext
