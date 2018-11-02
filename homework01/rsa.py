@@ -1,4 +1,6 @@
 import random
+
+
 def is_prime(n):
     """
     >>> is_prime(2)
@@ -12,36 +14,38 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-    pass
 
-    def gcd(a, b):
+
+def gcd(a, b):
     """
     >>> gcd(12, 15)
     3
     >>> gcd(3, 7)
     1
     """
-    if b==0:
+    if b == 0:
         return a
+
     else:
-        return gcd(b, a%b)
-    pass
-    def multiplicative_inverse(e, phi):
+        return gcd(b, a % b)
+
+
+def multiplicative_inverse(e, phi):
     """
     >>> multiplicative_inverse(7, 40)
     23
     """
-def gcdex(a, b):
-        if b == 0:
-            return a, 1, 0
-        else:
-            d, x, y = gcdex(b, a % b)
-            return d, y, x - y * (a // b)
-
+    def gcdex(a, b):
+            if b == 0:
+                return a, 1, 0
+            else:
+                d, x, y = gcdex(b, a % b)
+                return d, y, x - y * (a // b)
     d, x, y = gcdex(e, phi)
-    return x % phi
+return x % phi
 
-    def generate_keypair(p, q):
+
+def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
         raise ValueError('Both numbers must be prime.')
     elif p == q:
@@ -68,7 +72,8 @@ def gcdex(a, b):
     # Public key is (e, n) and private key is (d, n)
     return ((e, n), (d, n))
 
-    def encrypt(pk, plaintext):
+
+def encrypt(pk, plaintext):
     # Unpack the key into it's components
     key, n = pk
     # Convert each letter in the plaintext to numbers based on
@@ -100,9 +105,4 @@ if __name__ == '__main__':
     print(''.join(map(lambda x: str(x), encrypted_msg)))
     print("Decrypting message with public key ", public, " . . .")
     print("Your message is:")
-    print(decrypt(public, encrypted_msg))
-
-
-
-
-    
+    print(decrypt(public, encrypted_msg)"\n")
