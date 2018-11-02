@@ -42,7 +42,7 @@ def multiplicative_inverse(e, phi):
                 d, x, y = gcdex(b, a % b)
                 return d, y, x - y * (a // b)
     d, x, y = gcdex(e, phi)
-return x % phi
+    return x % phi
 
 
 def generate_keypair(p, q):
