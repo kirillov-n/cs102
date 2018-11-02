@@ -16,8 +16,8 @@ def encrypt_caesar(plaintext):
         if  alph >= 'a' and alph <= 'z' or alph >= 'A' and alph <= 'Z':
             code = ord(alph) + shift
 
-    for abcd in plaintext:
-        if  abcd >= 'a' and abcd <= 'z' or abcd >= 'A' and abcd <= 'Z':
+    for alph in plaintext:
+        if  alph >= 'a' and alph <= 'z' or alph >= 'A' and alph <= 'Z':
             code = ord(abcd) + shift
 
             if code > ord('Z') and code < ord('a') or code > ord('z'):
@@ -26,8 +26,6 @@ def encrypt_caesar(plaintext):
         else:
 
             ciphertext += alph
-
-            ciphertext += abcd
 
     return ciphertext
 
@@ -50,9 +48,9 @@ def decrypt_caesar(ciphertext):
         if alph >= 'a' and alph <= 'z' or alph >= 'A' and alph <= 'Z':
            code = ord(alph) - shift
 
-    for abcd in ciphertext:
-        if abcd >= 'a' and abcd <= 'z' or abcd >= 'A' and abcd <= 'Z':
-           code = ord(abcd) - shift
+    for alph in ciphertext:
+        if alph >= 'a' and alph <= 'z' or alph >= 'A' and alph <= 'Z':
+           code = ord(alph) - shift
 
            if code < ord('a') and code > ord('Z') or code < ord('A'):
                 code += 26
@@ -60,7 +58,5 @@ def decrypt_caesar(ciphertext):
         else:
 
             plaintext += alph
-
-            plaintext += abcd
 
     return plaintext
