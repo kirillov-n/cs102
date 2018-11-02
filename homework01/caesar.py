@@ -18,7 +18,7 @@ def encrypt_caesar(plaintext):
 
     for alph in plaintext:
         if  alph >= 'a' and alph <= 'z' or alph >= 'A' and alph <= 'Z':
-            code = ord(abcd) + shift
+            code = ord(alph) + shift
 
             if code > ord('Z') and code < ord('a') or code > ord('z'):
                 code -= 26
