@@ -42,7 +42,7 @@ def multiplicative_inverse(e, phi):
                 d, x, y = gcdex(b, a % b)
                 return d, y, x - y * (a // b)
     d, x, y = gcdex(e, phi)
-return x % phi
+    return x % phi
 
 
 def generate_keypair(p, q):
@@ -105,4 +105,4 @@ if __name__ == '__main__':
     print(''.join(map(lambda x: str(x), encrypted_msg)))
     print("Decrypting message with public key ", public, " . . .")
     print("Your message is:")
-    print(decrypt(public, encrypted_msg)"\n")
+    print(decrypt(public, encrypted_msg))
