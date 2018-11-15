@@ -28,7 +28,10 @@ def group(values: list, n: int) -> list:
     >>> group([1,2,3,4,5,6,7,8,9], 3)
     [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     """
-    return[values[i:i + n] for i in range(0, len(values), n)]
+    lenght = len(values)
+    groups = [values[i:i + n] for i in range(0, lenght, n)]
+
+    return groups
 
 
 def get_row(values: list, pos: tuple) -> list:
