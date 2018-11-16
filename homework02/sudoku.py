@@ -58,12 +58,7 @@ def get_col(values: list, pos: tuple) -> list:
     >>> get_col([['1', '2', '3'], ['4', '5', '6'], ['.', '8', '9']], (0, 2))
     ['3', '6', '9']
     """
-    _, col = pos
-    columns = []
-    for i in range(len(values)):
-        for j in range(0, len(values[i]), 3):
-            columns.append(values[i][col])
-    return columns
+    return [values[i][pos[1]] for i in range(len(values))]
 
 
 def get_block(values: list, pos: tuple) -> list:
@@ -92,9 +87,10 @@ def find_empty_positions(grid: list) -> tuple:
     (2, 0)
     """
     for i in range(len(grid)):
-        if (grid[i].count(".") != 0):
-            return(i, grid[i].index("."))
-    return ()
+        for j in range(len(grid)):
+            if grid[i][j] == '.':
+                return(i, j)
+    return None
 
 
 def find_possible_values(grid: list, pos: tuple) -> set:
@@ -111,7 +107,7 @@ def find_possible_values(grid: list, pos: tuple) -> set:
     return set('123456789') - set(get_row(grid, pos)) - set(get_block(grid, pos)) - set(get_col(grid, pos))
 
 
-def solve(grid):
+def solve(grid: list) -> None:
     """ Решение пазла, заданного в grid """
     """ Как решать Судоку?
         1. Найти свободную позицию
