@@ -90,7 +90,7 @@ def find_empty_positions(grid: list) -> tuple:
         for j in range(len(grid)):
             if grid[i][j] == '.':
                 return(i, j)
-    return None
+    return ()
 
 
 def find_possible_values(grid: list, pos: tuple) -> set:
@@ -107,7 +107,7 @@ def find_possible_values(grid: list, pos: tuple) -> set:
     return set('123456789') - set(get_row(grid, pos)) - set(get_block(grid, pos)) - set(get_col(grid, pos))
 
 
-def solve(grid: list) -> None:
+def solve(grid: list) -> list:
     """ Решение пазла, заданного в grid """
     """ Как решать Судоку?
         1. Найти свободную позицию
