@@ -130,7 +130,7 @@ def solve(grid: list) -> list:
         if solution:
             return solution
     grid[row][col] = '.'
-    return None
+    return ()
 
 
 def check_solution(solution: list) -> bool:
