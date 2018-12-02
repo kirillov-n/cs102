@@ -24,7 +24,7 @@ class GameOfLife:
         # Скорость протекания игры
         self.speed = speed
 
-    def draw_grid(self):
+    def draw_grid(self) -> None:
         """ Отрисовать сетку """
         for x in range(0, self.width, self.cell_size):
             pygame.draw.line(self.screen, pygame.Color('black'),
@@ -33,7 +33,7 @@ class GameOfLife:
             pygame.draw.line(self.screen, pygame.Color('black'),
                     (0, y), (self.width, y))
 
-    def run(self):
+    def run(self) -> None:
         """ Запустить игру """
         pygame.init()
         clock = pygame.time.Clock()
@@ -65,7 +65,7 @@ class GameOfLife:
             clock.tick(self.speed)
         pygame.quit()
 
-    def cell_list(self, randomize = True):
+    def cell_list(self, randomize: bool = True) -> tuple:
         """ Создание списка клеток.
 
         :param randomize: Если True, то создается список клеток, где
@@ -84,7 +84,7 @@ class GameOfLife:
         	self.clist.append(list_width)
         return self.clist
 
-    def draw_cell_list(self, rects):
+    def draw_cell_list(self, rects: list) -> None:
         """ Отображение списка клеток
         :param rects: Список клеток для отрисовки, представленный в виде матрицы
         """
@@ -136,7 +136,7 @@ class GameOfLife:
         return neighbours
 
 
-    def update_cell_list(self, cell_list):
+    def update_cell_list(self, cell_list) -> object:
         """ Выполнить один шаг игры.
 
         Обновление всех ячеек происходит одновременно. Функция возвращает
