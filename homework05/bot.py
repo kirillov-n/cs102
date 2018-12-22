@@ -11,18 +11,6 @@ week_l = ['/monday', '/tuesday', '/wednesday', '/thursday', '/friday', '/saturda
 week_d = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
 
 
-def get_page(group, week='') -> str:
-    if week:
-        week = str(week) + '/'
-    url = '{domain}/{group}/{week}raspisanie_zanyatiy_{group}.htm'.format(
-        domain=config.BOT['domain'],
-        week=week,
-        group=group)
-    response = requests.get(url)
-    web_page = response.text
-    return web_page
-
-
 def get_schedule(web_page, day):
     soup = BeautifulSoup(web_page, "html5lib")
 
@@ -51,18 +39,30 @@ def get_schedule(web_page, day):
     return times_list, locations_list, lessons_list
 
 
+def get_page(group, week='') -> str:
+    if week:
+        week = str(week) + '/'
+    url = '{domain}/{group}/{week}raspisanie_zanyatiy_{group}.htm'.format(
+        domain=config.BOT['domain'],
+        week=week,
+        group=group)
+    response = requests.get(url)
+    web_page = response.text
+    return web_page
+
+
 @bot.message_handler(commands=['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'])
 def get_day(message):
     """ Получить расписание на указанный день """
     try:
         day, week, group = message.text.split()
     except:
-        bot.send_message(message.chat.id, "Ошибка, попробуйте ещё раз")
+        bot.send_message(message.chat.id, "Error, попробуй ещё раз")
         return None
     web_page = get_page(group, week)
     schedule = get_schedule(web_page, day)
     if not schedule:
-        bot.send_message(message.chat.id, "У указанной группы нет занятий в этот день")
+        bot.send_message(message.chat.id, "У этой группы занятий в этот день нет")
         return None
     times_lst, locations_lst, lessons_lst =  schedule
     resp = ''
@@ -77,7 +77,7 @@ def get_near_lesson(message):
     try:
         _, group = message.text.split()
     except:
-        bot.send_message(message.chat.id, "Ошибка, попробуйте ещё раз")
+        bot.send_message(message.chat.id, "Error, попробуй ещё раз")
         return None
     today = datetime.datetime.now().weekday()
     if today != 6:
@@ -113,7 +113,7 @@ def get_near_lesson(message):
         time = int(t1 + t2)
         cur_time = int(str(datetime.datetime.now().hour) + str(datetime.datetime.now().minute))
         if cur_time < time:
-            resp = '<bВаша следующая пара будет в ' + week_d[week_l.index(today)] + ':</b>\n'
+            resp = '<bТвоя следующая пара будет в ' + week_d[week_l.index(today)] + ':</b>\n'
             resp += '<b>{}</b>, {}, {}\n'.format(times_lst[cnt], locations_lst[cnt], lessons_lst[cnt])
             bot.send_message(message.chat.id, resp, parse_mode='HTML')
             state = 1
@@ -144,7 +144,7 @@ def get_tomorrow(message):
     try:
         _, group = message.text.split()
     except:
-        bot.send_message(message.chat.id, "Ошибка, попробуйте ещё раз")
+        bot.send_message(message.chat.id, "Error, попробуй ещё раз")
         return None
     _, group = message.text.split()
     if int(datetime.datetime.today().strftime('%U')) % 2 == 1:
@@ -158,7 +158,7 @@ def get_tomorrow(message):
     tomorrow = week_l[tomorrow.weekday()]
     schedule = get_schedule(web_page, tomorrow)
     if not schedule:
-        bot.send_message(message.chat.id, "Ошибка, попробуйте еще раз (Может быть в этот день у группы нет занятий)")
+        bot.send_message(message.chat.id, "Error, попробуй ещё раз (Возможно что в этот день у этой группы нет занятий)")
         return None
     times_lst, locations_lst, lessons_lst = schedule
     resp = '<b>Расписание на завтра для ' + group + ':\n\n</b>'
@@ -174,7 +174,7 @@ def get_all_schedule(message):
     try:
         _, week, group = message.text.split()
     except:
-        bot.send_message(message.chat.id, "Ошибка")
+        bot.send_message(message.chat.id, "Error")
         return None
     web_page = get_page(group, week)
     if int(week) == 1:
