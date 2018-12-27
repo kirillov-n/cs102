@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 
 bot = telebot.TeleBot(config.BOT['access_token'])
-week_l = ['/monday', '/tuesday', '/wednesday', '/thursday', '/friday', '/saturday']
+week_list = ['/monday', '/tuesday', '/wednesday', '/thursday', '/friday', '/saturday']
 week_d = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
 
 
@@ -15,8 +15,8 @@ def get_schedule(web_page, day):
     soup = BeautifulSoup(web_page, "html5lib")
 
     # Получаем таблицу с расписанием на день недели
-    if day in week_l:
-        day_number = str(week_l.index(day) + 1) + "day"
+    if day in week_list:
+        day_number = str(week_list.index(day) + 1) + "day"
     else:
         day_number = "1day"
     schedule_table = soup.find("table", attrs={"id": day_number})
@@ -81,7 +81,7 @@ def get_near_lesson(message):
         return None
     today = datetime.datetime.now().weekday()
     if today != 6:
-        today = week_l[today]
+        today = week_list[today]
     else:
         bot.send_message(message.chat.id, 'Выходной')
     while True:
@@ -113,7 +113,7 @@ def get_near_lesson(message):
         time = int(t1 + t2)
         cur_time = int(str(datetime.datetime.now().hour) + str(datetime.datetime.now().minute))
         if cur_time < time:
-            resp = '<bТвоя следующая пара будет в ' + week_d[week_l.index(today)] + ':</b>\n'
+            resp = '<bТвоя следующая пара будет в ' + week_d[week_list.index(today)] + ':</b>\n'
             resp += '<b>{}</b>, {}, {}\n'.format(times_lst[cnt], locations_lst[cnt], lessons_lst[cnt])
             bot.send_message(message.chat.id, resp, parse_mode='HTML')
             state = 1
@@ -127,7 +127,7 @@ def get_near_lesson(message):
                 tomorrow += datetime.timedelta(days=2)
             else:
                 tomorrow += datetime.timedelta(days=1)
-            tomorrow = week_l[tomorrow.weekday()]
+            tomorrow = week_list[tomorrow.weekday()]
             schedule = get_schedule(web_page, tomorrow)
             if not schedule:
                 count += 1
@@ -155,7 +155,7 @@ def get_tomorrow(message):
     tomorrow = datetime.datetime.now() + datetime.timedelta(days=1)
     if tomorrow.weekday() == 7:
         tomorrow = tomorrow + datetime.timedelta(days=1)
-    tomorrow = week_l[tomorrow.weekday()]
+    tomorrow = week_list[tomorrow.weekday()]
     schedule = get_schedule(web_page, tomorrow)
     if not schedule:
         bot.send_message(message.chat.id, "Error, попробуй ещё раз (Возможно что в этот день у этой группы нет занятий)")
@@ -183,8 +183,8 @@ def get_all_schedule(message):
         resp = '<b>Расписание для ' + str(group) + ' на нечетную неделю:</b>\n\n'
     else:
         resp = '<b>Все расписание для ' + str(group) + ':</b>\n\n'
-    for day in week_l:
-        resp += '<b>' + week_d[week_l.index(day)] + '</b>' + ':\n'
+    for day in week_list:
+        resp += '<b>' + week_d[week_list.index(day)] + '</b>' + ':\n'
         schedule = get_schedule(web_page, day)
         if not schedule:
             continue
