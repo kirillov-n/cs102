@@ -11,7 +11,7 @@ week_list = ['/monday', '/tuesday', '/wednesday', '/thursday', '/friday', '/satu
 week_d = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
 
 
-def get_schedule(web_page, day):
+def get_schedule(web_page, day) -> Optional[tuple, None]:
     soup = BeautifulSoup(web_page, "html5lib")
 
     # Получаем таблицу с расписанием на день недели
