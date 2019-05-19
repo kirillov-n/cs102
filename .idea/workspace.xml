@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a395e4c5-8931-4acd-963a-8c0541db5052" name="Default Changelist" comment="HW6" />
+    <list default="true" id="a395e4c5-8931-4acd-963a-8c0541db5052" name="Default Changelist" comment="HW6">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework06/bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework06/bayes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework06/data/SMSSpamCollection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework06/hackernews.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework06/hackernews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework06/news.db" beforeDir="false" afterPath="$PROJECT_DIR$/homework06/news.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework06/scraputils.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework06/scraputils.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,23 +16,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cs102$lab1.coverage" NAME="lab1 Coverage Results" MODIFIED="1550690795256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Мультимедиа" />
+    <SUITE FILE_PATH="coverage/cs102$lab1.coverage" NAME="lab1 Coverage Results" MODIFIED="1551856510558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Мультимедиа" />
+    <SUITE FILE_PATH="coverage/cs102$hackernews.coverage" NAME="hackernews Coverage Results" MODIFIED="1551864772766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework06" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="news" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/Мультимедиа/lab1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>y</find>
+      <find>string</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,12 +54,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$USER_HOME$/Desktop/Мультимедиа/lab1.py" />
+        <option value="$PROJECT_DIR$/homework06/scraputils.py" />
+        <option value="$PROJECT_DIR$/homework06/news_recommendations.tpl" />
+        <option value="$PROJECT_DIR$/homework06/hackernews.py" />
+        <option value="$PROJECT_DIR$/homework06/bayes.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -55,6 +78,11 @@
               <item name="cs102" type="b2602c69:ProjectViewProjectNode" />
               <item name="cs102" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cs102" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs102" type="462c0819:PsiDirectoryNode" />
+              <item name="homework06" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -64,7 +92,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Мультимедиа/lab1.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Мультимедиа" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
@@ -79,7 +107,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.hackernews">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="cs102" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hackernews" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cs102" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework06" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework06/hackernews.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="lab1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cs102" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,6 +176,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hackernews" />
         <item itemvalue="Python.lab1" />
       </list>
     </recent_temporary>
@@ -122,6 +195,14 @@
       <workItem from="1550160783664" duration="414000" />
       <workItem from="1550161470182" duration="794000" />
       <workItem from="1550660326557" duration="6345000" />
+      <workItem from="1551550799199" duration="977000" />
+      <workItem from="1551630517104" duration="1498000" />
+      <workItem from="1551791269976" duration="1072000" />
+      <workItem from="1551856413878" duration="1985000" />
+      <workItem from="1551863534425" duration="6725000" />
+      <workItem from="1552073117557" duration="2576000" />
+      <workItem from="1552112520913" duration="5214000" />
+      <workItem from="1553014501975" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="HW6">
       <created>1550660608698</created>
@@ -134,59 +215,128 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7643000" />
+    <option name="totallyTimeSpent" value="27723000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23489933" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3489933" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3982808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32761088" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" x="23" y="271" width="1490" height="281" id="Python Console" order="11" visible="true" weight="0.4025788" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="4" weight="0.1590604" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" side_tool="true" weight="0.3295302" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.041608877" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3982808" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32808024" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32808024" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" side_tool="true" weight="0.3295302" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.tpl" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HW6" />
     <option name="LAST_COMMIT_MESSAGE" value="HW6" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Desktop/Мультимедиа/lab1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework06/news_recommendations.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dfb87b8b-586c-43a3-93ab-1503e42677b0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework06/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework06/SMSSpamCollection">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework06/hackernews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="65" selection-start-line="63" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/homework06/scraputils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="42" />
+        <state relative-caret-position="335">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Мультимедиа/lab1.py">
+    <entry file="file://$PROJECT_DIR$/homework06/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="199">
+          <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
