@@ -4,4 +4,4 @@ Email: kirillovnik2001@gmail.com
 
 Slack: Николай
 
-Group: K3242
+Group: K3142
